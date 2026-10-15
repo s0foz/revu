@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f8fafc;
+  --foreground: #0f172a;
+  --muted: #64748b;
+  --border: #e2e8f0;
+  --surface: #ffffff;
+  /* Default agency brand colour. Overridden per agency in Phase 3. */
+  --brand: #4f46e5;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-surface: var(--surface);
+  --color-brand: var(--brand);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Clerk's prebuilt components render their own chrome; keep them on-brand. */
+.cl-rootBox,
+.cl-card {
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+}
